@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body { font-family: 'Quicksand', sans-serif; color: #4a2040; min-height: 100vh;
+  background: linear-gradient(135deg, #fff0f5, #f3e8ff 50%, #ffe4ec); background-attachment: fixed; }
+.script { font-family: 'Great Vibes', cursive; }
+.serif { font-family: 'Playfair Display', serif; }
+.glass { background: rgba(255,255,255,.58); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.75); box-shadow: 0 10px 40px rgba(183,110,121,.18); }
+.gold-text { background: linear-gradient(90deg,#b76e79,#e8b4b8,#a855f7,#b76e79); background-size: 200%; -webkit-background-clip: text; color: transparent; animation: shine 6s linear infinite; }
+.btn { @apply px-6 py-3 rounded-full text-white font-semibold shadow-lg transition hover:scale-105 active:scale-95 disabled:opacity-50; background: linear-gradient(135deg,#f472b6,#a855f7); box-shadow: 0 0 24px rgba(244,114,182,.5); }
+.btn2 { @apply px-4 py-2 rounded-full text-sm font-semibold bg-white/80 text-pink-700 border border-pink-200 transition hover:bg-pink-100; }
+.inp { @apply w-full rounded-xl border border-pink-200 bg-white/80 px-3 py-2 outline-none focus:ring-2 focus:ring-pink-300; }
+.rise { animation: rise .8s both; }
+.heart-beat { animation: beat 1.2s infinite; filter: drop-shadow(0 0 24px #ff6b9d); }
+.kenburns { animation: kb 5s ease-out both; }
+.flip { animation: flip .7s both; transform-origin: left center; }
+.shake { animation: shake .4s; }
+.caret::after { content: '|'; animation: blink 1s infinite; }
+@keyframes rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+@keyframes beat { 0%,100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+@keyframes shine { to { background-position: 200%; } }
+@keyframes floatUp { 0% { transform: translateY(0) scale(.6); opacity: 0; } 10% { opacity: .85; } 100% { transform: translateY(-115vh) scale(1.2) rotate(40deg); opacity: 0; } }
+@keyframes kb { 0% { opacity: 0; transform: scale(1); } 15% { opacity: 1; } 100% { opacity: 1; transform: scale(1.1); } }
+@keyframes flip { from { transform: perspective(900px) rotateY(-70deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes shake { 25% { transform: translateX(-8px); } 75% { transform: translateX(8px); } }
+@keyframes blink { 50% { opacity: 0; } }
